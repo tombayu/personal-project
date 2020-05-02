@@ -2,3 +2,5 @@
 .Rhistory
 .RData
 .Ruserdata
+**/traffic-analysis/output
+**/traffic-analysis/data
