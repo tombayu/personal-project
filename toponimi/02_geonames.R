@@ -127,6 +127,12 @@ buat_peta(hari, semua_hari,
           subtitle = "Toponimi dengan nama hari")
 ggsave("output/geonames/05_Hari.png", height = 13, width = 15, units = "cm", dpi = 400, bg = "transparent")
 
+## Tanah
+tanah <- filter_toponimi("Tanah", gaz_jkt)
+buat_peta(tanah[[1]], tanah[[2]],
+          title = "Tanah-tanah di Jakarta", subtitle = "Wilayah dengan awalan tanah-")
+ggsave("output/geonames/10_Tanah.png", height = 13, width = 15, units = "cm", dpi = 400, bg = "transparent")
+
 ## Fitur geografi!
 # Rawa
 rawa <- filter_toponimi("Rawa", gaz_jkt)
@@ -157,11 +163,7 @@ buat_peta(gunung[[1]], gunung[[2]],
           title = "Gunung", subtitle = "Wilayah dengan awalan gunung-") + theme(plot.subtitle = element_blank())
 ggsave("output/geonames/09_Gunung.png", height = 13, width = 15, units = "cm", dpi = 400, bg = "transparent")
 
-## Tanah
-tanah <- filter_toponimi("Tanah", gaz_jkt)
-buat_peta(tanah[[1]], tanah[[2]],
-          title = "Tanah", subtitle = "Wilayah dengan awalan tanah-") + theme(plot.subtitle = element_blank())
-ggsave("output/geonames/10_Tanah.png", height = 13, width = 15, units = "cm", dpi = 400, bg = "transparent")
+
 
 ##############
 
