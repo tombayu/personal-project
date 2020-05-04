@@ -105,7 +105,7 @@ buat_peta(jati[[1]], jati[[2]],
 ggsave("output/geonames/04_Jati.png", height = 13, width = 15, units = "cm", dpi = 400, bg = "transparent")
 
 ## Hari
-nama_hari <- c("senen", "senin", "selasa", "rabu", "rebo", "kamis", "jumat", "sabtu", "minggu")
+nama_hari <- c("senen", "senin", "selasa", "rabu", "rebo", "kamis", "kemis", "jumat", "sabtu", "minggu")
 possible_filter <- possibly(filter_toponimi, otherwise = NA_real_)
 
 hari <- nama_hari %>%
@@ -130,7 +130,7 @@ ggsave("output/geonames/05_Hari.png", height = 13, width = 15, units = "cm", dpi
 ## Tanah
 tanah <- filter_toponimi("Tanah", gaz_jkt)
 buat_peta(tanah[[1]], tanah[[2]],
-          title = "Tanah-tanah di Jakarta", subtitle = "Wilayah dengan awalan tanah-")
+          title = "Tanah-tanah di Jakarta", subtitle = "Toponimi dengan awalan tanah-")
 ggsave("output/geonames/10_Tanah.png", height = 13, width = 15, units = "cm", dpi = 400, bg = "transparent")
 
 ## Fitur geografi!
