@@ -5,3 +5,6 @@
 **/traffic-analysis/output
 **/traffic-analysis/data
 **/toponimi/data/geonames
+**/toponimi/output/geonames/cropped
+**/toponimi/output/geonames/twitter
+**/toponimi/tweet.docx

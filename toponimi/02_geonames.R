@@ -182,51 +182,10 @@ gunung[[1]] <- gunung[[1]] %>%
 
 buat_peta(gunung[[1]], gunung[[2]],
           title = "Gunung", subtitle = "Wilayah dengan awalan gunung-") + theme(plot.subtitle = element_blank())
-ggsave("output/geonames/09_Gunung.png", height = 13, width = 15, units = "cm", dpi = 400)
+ggsave("output/geonames/09_Gunung.png", height = 13, width = 15, units = "cm", dpi = 400, bg = "transparent")
 
 ## Ci
 ci <- filter_toponimi("Ci", gaz_jkt)
 buat_peta_mod(ci[[1]], ci[[2]],
           title = "Ci- ci- an di Ja kar ta", subtitle = " :-)", size = 1.5)
 ggsave("output/geonames/11_Ci.png", height = 13, width = 15, units = "cm", dpi = 400, bg = "transparent")
-ci[[2]]
-###########
-frawa <- buat_peta_fgeo(rawa[[1]], rawa[[2]], "Rawa")
-flebak <- buat_peta_fgeo(lebak[[1]], lebak[[2]], "Lebak")
-fgunung <- buat_peta_fgeo(gunung[[1]], gunung[[2]], "Gunung")
-fbukit <- buat_peta_fgeo(bukit[[1]], bukit[[2]], "Bukit")
-
-geof <- ggarrange(frawa, flebak, fgunung, fbukit,
-          nrow = 2, ncol = 2)
-annotate_figure(geof, bottom = "© 2020 Tombayu Amadeo Hidayat\nSumber data: geonames.org, RBI25K")
-ggsave("output/geonames/11_FiturGeografis.png", height = 13, width = 15, units = "cm", dpi = 400, bg = "transparent")
-
-##############
-
-
-id <- gaz_jkt %>%
-  select(name, asciiname, alternatenames, feature.class, feature.code) %>%
-  filter(str_detect(name, regex("kampung", ignore_case = T)) | str_detect(alternatenames, regex("kampung", ignore_case = T))) %>%
-  filter(!str_detect(name, "kelurahan")) %>%
-  mutate(shortname = gsub(".*kampung", "", .$name, ignore.case = T)) %>%
-  mutate(shortname = tolower(gsub(" ", "", .$shortname)), id = 1:nrow(.)) %>%
-  st_drop_geometry() %>%
-  distinct(shortname, .keep_all = T) %>%
-  select(shortname, id)
-
-label <- gaz_jkt %>%
-  select(name, asciiname, alternatenames, feature.class, feature.code) %>%
-  filter(str_detect(name, regex("kampung", ignore_case = T)) | str_detect(alternatenames, regex("kampung", ignore_case = T))) %>%
-  filter(!str_detect(name, "kelurahan")) %>%
-  mutate(shortname = gsub(".*kampung", "", .$name, ignore.case = T)) %>%
-  mutate(shortname = tolower(gsub(" ", "", .$shortname)), id = 1:nrow(.))
-
-titik <- gaz_jkt %>%
-  select(name, asciiname, alternatenames, feature.class, feature.code) %>%
-  filter(str_detect(name, regex("kampung", ignore_case = T)) | str_detect(alternatenames, regex("kampung", ignore_case = T))) %>%
-  filter(!str_detect(name, "kelurahan"))
-id  
-label
-
-?str_detect
-kampung
