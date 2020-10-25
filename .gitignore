@@ -3,10 +3,11 @@
 .RData
 .Ruserdata
 **/traffic-analysis/output
-**/traffic-analysis/data
-!**/traffic-analysis/data/bandung_ref.rds
+/traffic-analysis/data
+!/traffic-analysis/data/bandung_ref.rds
 **/toponimi/data/geonames
 **/toponimi/output/geonames/cropped
 **/toponimi/output/geonames/twitter
 **/toponimi/tweet.docx
 **/indische-buurten/data
+**/indonesian-recipe/
