@@ -3,7 +3,7 @@ library(edgebundle)
 library(igraph)
 library(sf)
 library(igraph)
-library(gggraph)
+library(hrbrthemes)
 
 rm(list = ls())
 
@@ -35,7 +35,7 @@ get_nodes_links <- function(koridor_data) {
 links_list <- list()
 nodes_list <- list()
 
-for (i in 1:160) {
+for (i in 1:nrow(tj)) {
   nl <- get_nodes_links(tj[i,])
   
   nodes_list[[i]] <- nl[[1]]
@@ -47,21 +47,48 @@ nodes <- bind_rows(nodes_list) %>%
   distinct()
 links <- bind_rows(links_list)
 
-network_k1 <- graph_from_data_frame(d = links, vertices = nodes,
+nw_tj <- graph_from_data_frame(d = links, vertices = nodes,
                                                 directed = F)
-network_k1 <- simplify(network_k1)
+nw_tj <- simplify(nw_tj)
 
 ### Experiment with visualization
+dki <- st_read("data/rbi/KotaJadetabek.geojson") %>%
+  mutate(geometry = geometry * 100) %>%
+  filter(str_detect(NAME_1, "Jakarta"))
+
 ## Force bundle
-k1_fbundle <- edge_bundle_force(network_k1, as.matrix(nodes[,3:4]) * 100, compatibility_threshold = 0.1)
+tj_fbundle <- edge_bundle_force(nw_tj, as.matrix(nodes[,3:4]) * 100, compatibility_threshold = 0.05)
 
 # Basic
-ggplot(k1_fbundle)+
-  geom_path(aes(x,y,group=group,col=as.factor(group)),size = 1,show.legend = FALSE)+
-  geom_point(data = nodes, aes(lon * 100, lat * 100), size = 1)+
-  ggraph::theme_graph(background = "black")
+ggplot(tj_fbundle) +
+  geom_sf(data = dki, fill = NA, col = "grey", size = 0.1, linetype = "dashed") +
+  geom_path(aes(x, y, group=group), col = "#9d0191", size = 0.2, show.legend = FALSE) +
+  geom_path(aes(x, y, group=group), col = "white", size = 0.1, alpha = 0.5, show.legend = FALSE) +
+  # geom_point(data = nodes, aes(lon * 100, lat * 100), col = "#9d0191", size = 0.02) +
+  # geom_point(data = nodes, aes(lon * 100, lat * 100), col = "white", size = 0.02, alpha = 0.5) +
+  labs(title = "Jakarta's transportation flow", caption = "@tom5ive\nData: Trafi") +
+  theme_ipsum_tw() +
+  theme(plot.title = element_text(color = "white"),
+        plot.caption = element_text(color = "white"),
+        plot.background = element_rect(fill = "black"),
+        panel.grid.major = element_blank(),
+        plot.margin = grid::unit(c(3, 3, 3, 3), "mm"),
+        axis.title.x = element_blank(), axis.text.x = element_blank(), axis.ticks.x = element_blank(),
+        axis.title.y = element_blank(), axis.text.y = element_blank(), axis.ticks.y = element_blank())
 
-# 
+ggsave("output/tj_fbundle_all_005.jpg", dpi = 500, width = 10, height = 10, units = "cm")
+
+## Bundle stub
+tj_stub <- edge_bundle_stub(nw_tj, as.matrix(nodes[,3:4]) * 100)
+
+ggplot(tj_stub)+
+  geom_bezier(aes(x,y,group=group),size=2,col="grey66")+
+  geom_point(data=as.data.frame(xy),aes(V1,V2),size=5)+
+  theme_void()
+
+## Hammer
+tj_hammer <- edge_bundle_hammer(nw_tj, as.matrix(nodes[,3:4]) * 100)
+
 
 p1 <- ggplot()+
   geom_polygon(data=states,aes(long,lat,group=group),col="white",size=0.1,fill=NA)+
@@ -75,186 +102,3 @@ p1 <- ggplot()+
   theme(plot.title = element_text(color="white"))
 ## 
 
-g <- graph_from_edgelist(
-  matrix(c(1,12,2,11,3,10,4,9,5,8,6,7),ncol=2,byrow = T),F)
-xy <- cbind(c(rep(0,6),rep(1,6)),c(1:6,1:6))
-
-fbundle <- edge_bundle_force(g,xy,compatibility_threshold = 0.1)
-head(fbundle)
-
-network_k1
-
-V(network_k1)
-nodes
-g
-xy
-##
-nodes
-k1[[1]]
-class(tj[1,])
-
-r1 <- tj[1,]
-
-koridor_1 <- tj %>%
-  filter(kode_koridor == "1") %>%
-  select(-halte) %>%
-  unnest(cols = c(rute)) %>%
-  filter(isHidden == F & direction == 1) %>%
-  select(-shape) %>%
-  unnest(cols = c(stops)) %>%
-  select(stopId) %>%
-  inner_join(tj_halte, by = c("stopId" = "halte_id"))
-
-from_to <- koridor_1 %>%
-  select("from" = stopId) %>%
-  mutate(to = lead(from)) %>%
-  slice(1:(n() - 1))
-from_to
-
-network_k1 <- graph_from_data_frame(d = from_to, vertices = koridor_1,
-                      directed = F)
-network_k1
-plot(network_k1)
-
-# function to batch 
-
-# get 3 different corridors
-
-# make edge bundle
-# 
-
-edge_bundle_force()
-
-##
-g <- graph_from_edgelist(
-  matrix(c(1,12,2,11,3,10,4,9,5,8,6,7),ncol=2,byrow = T),F)
-xy <- cbind(c(rep(0,6),rep(1,6)),c(1:6,1:6))
-V(g)
-g
-xy
-
-?edge_bundle_force
-fbundle <- edge_bundle_force(g,xy,compatibility_threshold = 0.1)
-head(fbundle)
-
-##
-
-
-str(nodes)
-str(links)
-head(nodes) # basically the halte
-head(links) # basically the rute
-
-net <- graph_from_data_frame(d = links, vertices = nodes,
-                             directed = T)
-1:5
-lead(1:5)
-?lag
-
-names(koridor_1)
-
-koridor_1$geometry
-
-coord <- st_coordinates(koridor_1$geometry)
-class(as.vector(coord[,1]))
-length(coord[,1])
-class(coord)
-koridor_1$geometry
-?st_coordinates
-
-str(koridor_1)
-koridor_1$stops
-  
-unnest_koridor_1 <- tj %>%
-  filter(kode_koridor == "1") %>%
-  unnest(c(rute))
-
-  koridor_1 <- tj %>%
-    filter(kode_koridor == "1") #%>%
-  unnest(c(rute))
-  
-  
-rute <- koridor_1$rute
-
-class(koridor_1$rute)
-koridor_1$rute %>%
-  filter(isHidden == F)
-
-head(koridor_1$rute)
-
-?graph
-
-
-####
-
-
-
-
-xy <- cbind(state.center$x,state.center$y)[!state.name%in%c("Alaska","Hawaii"),]
-xy_dummy <- tnss_dummies(xy,4)
-gtree <- tnss_tree(cali2010,xy,xy_dummy,4,gamma = 0.9)
-
-ggraph(gtree,"manual",x=V(gtree)$x,y=V(gtree)$y)+
-  geom_polygon(data=us,aes(long,lat,group=group),fill="#FDF8C7",col="black")+
-  geom_edge_link(aes(width=flow,col=sqrt((xy[root,1]-..x..)^2 + (xy[root,2]-..y..)^2)),
-                 lineend = "round",show.legend = FALSE)+
-  scale_edge_width(range=c(0.5,4),trans="sqrt")+
-  scale_edge_color_gradient(low="#cc0000",high = "#0000cc")+
-  geom_node_point(aes(filter=tnss=="real"),size=1)+
-  geom_node_point(aes(filter=(name=="California")),size=5,shape=22,fill="#cc0000")+
-  theme_graph()+
-  labs(title="Migration from California (2010) - Flow map")
-
-
-matrix(c(1,12,2,11,3,10,4,9,5,8,6,7),ncol=2,byrow = T)
-g <- graph_from_edgelist(
-  matrix(c(1,12,2,11,3,10,4,9,5,8,6,7),ncol=2,byrow = T),F)
-xy <- cbind(c(rep(0,6),rep(1,6)),c(1:6,1:6))
-fbundle <- edge_bundle_force(g,xy,compatibility_threshold = 0.1)
-head(fbundle)
-
-
-g
-xy
-
-?edge_bundle_force
-g
-xy
-?graph_from_data_frame
-
-cali2010
-f <- us_flights
-metro_berlin
-?graph_from_edgelist
-
-actors <- data.frame(name=c("Alice", "Bob", "Cecil", "David",
-                            "Esmeralda"),
-                     age=c(48,33,45,34,21),
-                     gender=c("F","M","F","M","F"))
-relations <- data.frame(from=c("Bob", "Cecil", "Cecil", "David",
-                               "David", "Esmeralda"),
-                        to=c("Alice", "Bob", "Alice", "Alice", "Bob", "Alice"),
-                        same.dept=c(FALSE,FALSE,TRUE,FALSE,FALSE,TRUE),
-                        friendship=c(4,5,5,2,1,1), advice=c(4,5,5,4,2,3))
-g <- graph_from_data_frame(relations, directed=TRUE, vertices=actors)
-print(g, e=TRUE, v=TRUE)
-
-actors
-relations
-?graph_from_data_frame
-
-
-##
-
-TJ <- read_rds("data/tj/TJ.rds")
-
-routes <- TJ %>%
-  select(-halte) %>%
-  unnest(cols = c(rute)) #%>%
-  mutate(coords = map(shape, decode_pl), warna = paste0("#", warna)) %>%
-  unnest(coords) %>%
-  st_as_sf(coords = c("lon", "lat")) %>%
-  group_by_at(vars(-stops, -geometry)) %>%
-  summarise(do_union = F) %>%
-  st_cast("LINESTRING")
-routes
