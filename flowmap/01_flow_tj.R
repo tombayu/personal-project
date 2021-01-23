@@ -48,7 +48,7 @@ nodes <- bind_rows(nodes_list) %>%
 links <- bind_rows(links_list)
 
 nw_tj <- graph_from_data_frame(d = links, vertices = nodes,
-                                                directed = F)
+                               directed = F)
 nw_tj <- simplify(nw_tj)
 
 ### Experiment with visualization
@@ -117,4 +117,3 @@ ggplot(tj_hammer) +
 ggsave("output/tj_hammer_all_extreme.jpg", dpi = 500, width = 10, height = 10, units = "cm")
 
 ## 
-
