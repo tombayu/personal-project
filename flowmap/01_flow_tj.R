@@ -31,7 +31,6 @@ get_nodes_links <- function(koridor_data) {
   return(list(nodes, links))
 }
 
-## Koridor 1 dan anak-anaknya
 links_list <- list()
 nodes_list <- list()
 
@@ -90,8 +89,7 @@ ggplot(tj_stub)+
 # v1: default
 # v2: bw = 0.7, decay = 0.5
 # v3: bw = 0.1, decay = 0.1
-tj_hammer <- edge_bundle_hammer(nw_tj, as.matrix(nodes[,3:4]) * 100, bw = 0.7, decay = 0.5)
-?edge_bundle_hammer
+tj_hammer <- edge_bundle_hammer(nw_tj, as.matrix(nodes[,3:4]) * 100)
 
 important_stops <- nodes %>%
   filter(n_koridor > 10)
@@ -100,13 +98,13 @@ ggplot(tj_hammer) +
   geom_sf(data = dki, fill = NA, col = "grey", size = 0.1, linetype = "dashed") +
   geom_path(aes(x, y, group=group), col = "#9d0191", size = 0.1, show.legend = FALSE) +
   geom_path(aes(x, y, group=group), col = "white", size = 0.05, alpha = 0.5, show.legend = FALSE) +
-  # geom_point(data = important_stops, aes(lon * 100, lat * 100, size = n_koridor), col = "steelblue2", alpha = 0.2, shape = 19) +
-  # geom_point(data = important_stops, aes(lon * 100, lat * 100), col = "steelblue2", size = 0.25) +
+  geom_point(data = important_stops, aes(lon * 100, lat * 100, size = n_koridor), col = "steelblue2", alpha = 0.2, shape = 19) +
+  geom_point(data = important_stops, aes(lon * 100, lat * 100), col = "steelblue2", size = 0.25) +
   # geom_text(data = important_stops, aes(lon * 100, lat * 100, label = nama_halte), size = 1, color = "steelblue2") +
-  labs(caption = "Tulang punggung Jakarta..\n@tom5ive - Data: Trafi") +
+  labs(caption = c("\n@tom5ive", "Jaringan layanan TransJakarta - Bundled\nData: Trafi")) +
   theme_ipsum_tw() +
   theme(plot.title = element_text(color = "white"),
-        plot.caption = element_text(color = "white", size = 8),
+        plot.caption = element_text(hjust = c(1, 0), color = "white", size = 8),
         plot.background = element_rect(fill = "black"),
         panel.grid.major = element_blank(),
         plot.margin = grid::unit(c(3, 3, 3, 3), "mm"),
@@ -114,6 +112,6 @@ ggplot(tj_hammer) +
         axis.title.y = element_blank(), axis.text.y = element_blank(), axis.ticks.y = element_blank(),
         legend.position = "none")
 
-ggsave("output/tj_hammer_all_extreme.jpg", dpi = 500, width = 10, height = 10, units = "cm")
+ggsave("output/tj_hammer_all_bundled.jpg", dpi = 500, width = 10, height = 10, units = "cm")
 
 ## 
