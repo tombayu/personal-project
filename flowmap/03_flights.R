@@ -66,6 +66,7 @@ for (i in 1:nrow(seq_comb)) {
   cat(paste0(i, " "))
   bw = as.double(seq_comb[i,][1])
   decay = as.double(seq_comb[i,][2])
+  ln_color = "white"
   flights_id_he <- edge_bundle_hammer(flights_id, as.matrix(airports_id[,5:6]), bw = bw, decay = decay)
   he_plot <- ggplot(flights_id_he) +
     geom_sf(data = id_prov, fill = NA, col = "grey", size = 0.05) +
@@ -73,17 +74,17 @@ for (i in 1:nrow(seq_comb)) {
     geom_path(aes(x, y, group=group), col = ln_color, size = 0.05, alpha = 0.3, show.legend = FALSE) +
     geom_point(data = airports_id, aes(lon, lat), col = "#9d0191", size = 0.1) +
     geom_point(data = airports_id, aes(lon, lat), col = "white", size = 0.09, alpha = 0.5) +
-    labs(caption = "Jaringan penerbangan domestik di Indonesia\n@tom5ive - Data: openflights.org") +
+    labs(caption = c("@tom5ive\ndata: openflights.org", paste0("bw = ", bw, "\ndecay =", decay))) +
     theme_ipsum_tw() +
     theme(plot.title = element_text(color = "white"),
-          plot.caption = element_text(color = "white"),
+          plot.caption = element_text(hjust = c(1, 0), color = "white"),
           plot.background = element_rect(fill = "black"),
           panel.grid.major = element_blank(),
           plot.margin = grid::unit(c(3, 3, 3, 3), "mm"),
           axis.title.x = element_blank(), axis.text.x = element_blank(), axis.ticks.x = element_blank(),
           axis.title.y = element_blank(), axis.text.y = element_blank(), axis.ticks.y = element_blank())
   
-  ggsave(paste0("output/he/id_flights_he", "_bw", bw, "_decay", decay, "_", ln_color, ".jpg"), plot = he_plot, dpi = 500, width = 15, height = 8, units = "cm")
+  ggsave(paste0("output/he/id_flights_he", "_bw", bw, "_decay", decay, "_", ln_color, ".jpg"), plot = he_plot, dpi = 200, width = 15, height = 8, units = "cm")
 }
 
 ## BEST OF..
