@@ -18,4 +18,6 @@
 **/flowmap/output/fd
 **/z_data-source/
 **/public-transportation/jakarta-train/data/raw/
+**/public-transportation/jakarta-train/output/pdf/
+**/public-transportation/jakarta-train/output/png/
 **/jkt-then-now
