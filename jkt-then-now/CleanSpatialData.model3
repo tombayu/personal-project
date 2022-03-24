@@ -1,0 +1,660 @@
+<!DOCTYPE model>
+<Option type="Map">
+  <Option type="Map" name="children">
+    <Option type="Map" name="native:buffer_1">
+      <Option type="bool" value="true" name="active"/>
+      <Option name="alg_config"/>
+      <Option type="QString" value="native:buffer" name="alg_id"/>
+      <Option type="QString" value="01_Buffer Jalan_pl" name="component_description"/>
+      <Option type="double" value="237" name="component_pos_x"/>
+      <Option type="double" value="193" name="component_pos_y"/>
+      <Option name="dependencies"/>
+      <Option type="QString" value="native:buffer_1" name="id"/>
+      <Option name="outputs"/>
+      <Option type="bool" value="true" name="outputs_collapsed"/>
+      <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="DISSOLVE">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="bool" value="true" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="DISTANCE">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="double" value="12.5" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="END_CAP_STYLE">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="int" value="1" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" value="jalanln" name="parameter_name"/>
+            <Option type="int" value="0" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="JOIN_STYLE">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="int" value="0" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="MITER_LIMIT">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="double" value="2" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="SEGMENTS">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="int" value="5" name="static_value"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="native:buffer_2">
+      <Option type="bool" value="true" name="active"/>
+      <Option name="alg_config"/>
+      <Option type="QString" value="native:buffer" name="alg_id"/>
+      <Option type="QString" value="02_Buffer JalurKA_pl" name="component_description"/>
+      <Option type="double" value="659" name="component_pos_x"/>
+      <Option type="double" value="233" name="component_pos_y"/>
+      <Option name="dependencies"/>
+      <Option type="QString" value="native:buffer_2" name="id"/>
+      <Option name="outputs"/>
+      <Option type="bool" value="true" name="outputs_collapsed"/>
+      <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="DISSOLVE">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="bool" value="true" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="DISTANCE">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="double" value="8" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="END_CAP_STYLE">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="int" value="1" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" value="jalurkaln" name="parameter_name"/>
+            <Option type="int" value="0" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="JOIN_STYLE">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="int" value="0" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="MITER_LIMIT">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="double" value="2" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="SEGMENTS">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="int" value="5" name="static_value"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="native:difference_1">
+      <Option type="bool" value="true" name="active"/>
+      <Option name="alg_config"/>
+      <Option type="QString" value="native:difference" name="alg_id"/>
+      <Option type="QString" value="03_Difference Jalan_bersih_pl" name="component_description"/>
+      <Option type="double" value="479" name="component_pos_x"/>
+      <Option type="double" value="331" name="component_pos_y"/>
+      <Option name="dependencies"/>
+      <Option type="QString" value="native:difference_1" name="id"/>
+      <Option name="outputs"/>
+      <Option type="bool" value="true" name="outputs_collapsed"/>
+      <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" value="native:buffer_1" name="child_id"/>
+            <Option type="QString" value="OUTPUT" name="output_name"/>
+            <Option type="int" value="1" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="OVERLAY">
+          <Option type="Map">
+            <Option type="QString" value="native:buffer_2" name="child_id"/>
+            <Option type="QString" value="OUTPUT" name="output_name"/>
+            <Option type="int" value="1" name="source"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="native:difference_2">
+      <Option type="bool" value="true" name="active"/>
+      <Option name="alg_config"/>
+      <Option type="QString" value="native:difference" name="alg_id"/>
+      <Option type="QString" value="05_Difference Perairan_bersih_pl" name="component_description"/>
+      <Option type="double" value="1038" name="component_pos_x"/>
+      <Option type="double" value="531" name="component_pos_y"/>
+      <Option name="dependencies"/>
+      <Option type="QString" value="native:difference_2" name="id"/>
+      <Option name="outputs"/>
+      <Option type="bool" value="true" name="outputs_collapsed"/>
+      <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" value="perairanpl" name="parameter_name"/>
+            <Option type="int" value="0" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="OVERLAY">
+          <Option type="Map">
+            <Option type="QString" value="native:union_1" name="child_id"/>
+            <Option type="QString" value="OUTPUT" name="output_name"/>
+            <Option type="int" value="1" name="source"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="native:difference_3">
+      <Option type="bool" value="false" name="active"/>
+      <Option name="alg_config"/>
+      <Option type="QString" value="native:difference" name="alg_id"/>
+      <Option type="QString" value="07_Difference Kampung_Bersih_pl" name="component_description"/>
+      <Option type="double" value="1474" name="component_pos_x"/>
+      <Option type="double" value="778" name="component_pos_y"/>
+      <Option name="dependencies"/>
+      <Option type="QString" value="native:difference_3" name="id"/>
+      <Option name="outputs"/>
+      <Option type="bool" value="true" name="outputs_collapsed"/>
+      <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" value="kampungpl" name="parameter_name"/>
+            <Option type="int" value="0" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="OVERLAY">
+          <Option type="Map">
+            <Option type="QString" value="saga:polygonunion_1" name="child_id"/>
+            <Option type="QString" value="RESULT" name="output_name"/>
+            <Option type="int" value="1" name="source"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="native:difference_4">
+      <Option type="bool" value="false" name="active"/>
+      <Option name="alg_config"/>
+      <Option type="QString" value="native:difference" name="alg_id"/>
+      <Option type="QString" value="09_Difference_Sawah_Bersih_pl" name="component_description"/>
+      <Option type="double" value="1814" name="component_pos_x"/>
+      <Option type="double" value="1019" name="component_pos_y"/>
+      <Option name="dependencies"/>
+      <Option type="QString" value="native:difference_4" name="id"/>
+      <Option name="outputs"/>
+      <Option type="bool" value="true" name="outputs_collapsed"/>
+      <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" value="sawahpl" name="parameter_name"/>
+            <Option type="int" value="0" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="OVERLAY">
+          <Option type="Map">
+            <Option type="QString" value="saga:polygonunion_2" name="child_id"/>
+            <Option type="QString" value="RESULT" name="output_name"/>
+            <Option type="int" value="1" name="source"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="native:difference_5">
+      <Option type="bool" value="false" name="active"/>
+      <Option name="alg_config"/>
+      <Option type="QString" value="native:difference" name="alg_id"/>
+      <Option type="QString" value="11_Difference_AreaTerbangun_Bersih_pl" name="component_description"/>
+      <Option type="double" value="2229" name="component_pos_x"/>
+      <Option type="double" value="1226" name="component_pos_y"/>
+      <Option name="dependencies"/>
+      <Option type="QString" value="native:difference_5" name="id"/>
+      <Option name="outputs"/>
+      <Option type="bool" value="true" name="outputs_collapsed"/>
+      <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" value="areaterbangunpl" name="parameter_name"/>
+            <Option type="int" value="0" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="OVERLAY">
+          <Option type="Map">
+            <Option type="QString" value="saga:polygonunion_3" name="child_id"/>
+            <Option type="QString" value="RESULT" name="output_name"/>
+            <Option type="int" value="1" name="source"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="native:difference_6">
+      <Option type="bool" value="false" name="active"/>
+      <Option name="alg_config"/>
+      <Option type="QString" value="native:difference" name="alg_id"/>
+      <Option type="QString" value="13_Difference_AreaTdkPadatPenduduk_Bersih_pl" name="component_description"/>
+      <Option type="double" value="2661" name="component_pos_x"/>
+      <Option type="double" value="1480" name="component_pos_y"/>
+      <Option name="dependencies"/>
+      <Option type="QString" value="native:difference_6" name="id"/>
+      <Option name="outputs"/>
+      <Option type="bool" value="true" name="outputs_collapsed"/>
+      <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" value="areatdkpadatpenduduk" name="parameter_name"/>
+            <Option type="int" value="0" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="OVERLAY">
+          <Option type="Map">
+            <Option type="QString" value="saga:polygonunion_4" name="child_id"/>
+            <Option type="QString" value="RESULT" name="output_name"/>
+            <Option type="int" value="1" name="source"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="native:union_1">
+      <Option type="bool" value="true" name="active"/>
+      <Option name="alg_config"/>
+      <Option type="QString" value="native:union" name="alg_id"/>
+      <Option type="QString" value="04_Union JalurKA_Jalan_bersih_pl" name="component_description"/>
+      <Option type="double" value="716" name="component_pos_x"/>
+      <Option type="double" value="422" name="component_pos_y"/>
+      <Option name="dependencies"/>
+      <Option type="QString" value="native:union_1" name="id"/>
+      <Option name="outputs"/>
+      <Option type="bool" value="true" name="outputs_collapsed"/>
+      <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" value="native:difference_1" name="child_id"/>
+            <Option type="QString" value="OUTPUT" name="output_name"/>
+            <Option type="int" value="1" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="OVERLAY">
+          <Option type="Map">
+            <Option type="QString" value="native:buffer_2" name="child_id"/>
+            <Option type="QString" value="OUTPUT" name="output_name"/>
+            <Option type="int" value="1" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="OVERLAY_FIELDS_PREFIX">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="QString" value="" name="static_value"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="saga:polygonunion_1">
+      <Option type="bool" value="true" name="active"/>
+      <Option name="alg_config"/>
+      <Option type="QString" value="saga:polygonunion" name="alg_id"/>
+      <Option type="QString" value="06_Polygon union JalurKA_Jalan_Perairan_Bersih_pl" name="component_description"/>
+      <Option type="double" value="1272" name="component_pos_x"/>
+      <Option type="double" value="656" name="component_pos_y"/>
+      <Option name="dependencies"/>
+      <Option type="QString" value="saga:polygonunion_1" name="id"/>
+      <Option type="Map" name="outputs">
+        <Option type="Map" name="JalurKA_Jalan_Perairan_Bersih_pl">
+          <Option type="QString" value="saga:polygonunion_1" name="child_id"/>
+          <Option type="QString" value="JalurKA_Jalan_Perairan_Bersih_pl" name="component_description"/>
+          <Option type="double" value="1225" name="component_pos_x"/>
+          <Option type="double" value="839" name="component_pos_y"/>
+          <Option type="invalid" name="default_value"/>
+          <Option type="bool" value="false" name="mandatory"/>
+          <Option type="QString" value="JalurKA_Jalan_Perairan_Bersih_pl" name="name"/>
+          <Option type="QString" value="RESULT" name="output_name"/>
+        </Option>
+      </Option>
+      <Option type="bool" value="true" name="outputs_collapsed"/>
+      <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="A">
+          <Option type="Map">
+            <Option type="QString" value="native:difference_2" name="child_id"/>
+            <Option type="QString" value="OUTPUT" name="output_name"/>
+            <Option type="int" value="1" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="B">
+          <Option type="Map">
+            <Option type="QString" value="native:union_1" name="child_id"/>
+            <Option type="QString" value="OUTPUT" name="output_name"/>
+            <Option type="int" value="1" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="SPLIT">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="bool" value="true" name="static_value"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="saga:polygonunion_2">
+      <Option type="bool" value="false" name="active"/>
+      <Option name="alg_config"/>
+      <Option type="QString" value="saga:polygonunion" name="alg_id"/>
+      <Option type="QString" value="08_Polygon union JalurKA_Jalan_Perairan_Kampung_Bersih_pl" name="component_description"/>
+      <Option type="double" value="1594" name="component_pos_x"/>
+      <Option type="double" value="918" name="component_pos_y"/>
+      <Option name="dependencies"/>
+      <Option type="QString" value="saga:polygonunion_2" name="id"/>
+      <Option name="outputs"/>
+      <Option type="bool" value="true" name="outputs_collapsed"/>
+      <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="A">
+          <Option type="Map">
+            <Option type="QString" value="native:difference_3" name="child_id"/>
+            <Option type="QString" value="OUTPUT" name="output_name"/>
+            <Option type="int" value="1" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="B">
+          <Option type="Map">
+            <Option type="QString" value="saga:polygonunion_1" name="child_id"/>
+            <Option type="QString" value="RESULT" name="output_name"/>
+            <Option type="int" value="1" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="SPLIT">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="bool" value="false" name="static_value"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="saga:polygonunion_3">
+      <Option type="bool" value="false" name="active"/>
+      <Option name="alg_config"/>
+      <Option type="QString" value="saga:polygonunion" name="alg_id"/>
+      <Option type="QString" value="10_Polygon union_JalurKA_Jalan_Perairan_Kampung_Sawah_Bersih_pl" name="component_description"/>
+      <Option type="double" value="2002" name="component_pos_x"/>
+      <Option type="double" value="1134" name="component_pos_y"/>
+      <Option name="dependencies"/>
+      <Option type="QString" value="saga:polygonunion_3" name="id"/>
+      <Option name="outputs"/>
+      <Option type="bool" value="true" name="outputs_collapsed"/>
+      <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="A">
+          <Option type="Map">
+            <Option type="QString" value="saga:polygonunion_2" name="child_id"/>
+            <Option type="QString" value="RESULT" name="output_name"/>
+            <Option type="int" value="1" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="B">
+          <Option type="Map">
+            <Option type="QString" value="native:difference_4" name="child_id"/>
+            <Option type="QString" value="OUTPUT" name="output_name"/>
+            <Option type="int" value="1" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="SPLIT">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="bool" value="false" name="static_value"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="saga:polygonunion_4">
+      <Option type="bool" value="false" name="active"/>
+      <Option name="alg_config"/>
+      <Option type="QString" value="saga:polygonunion" name="alg_id"/>
+      <Option type="QString" value="12_Polygon union_JalurKA_Jalan_Perairan_Kampung_Sawah_AreaTerbangun_Bersih_pl" name="component_description"/>
+      <Option type="double" value="2431" name="component_pos_x"/>
+      <Option type="double" value="1339" name="component_pos_y"/>
+      <Option name="dependencies"/>
+      <Option type="QString" value="saga:polygonunion_4" name="id"/>
+      <Option name="outputs"/>
+      <Option type="bool" value="true" name="outputs_collapsed"/>
+      <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="A">
+          <Option type="Map">
+            <Option type="QString" value="saga:polygonunion_3" name="child_id"/>
+            <Option type="QString" value="RESULT" name="output_name"/>
+            <Option type="int" value="1" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="B">
+          <Option type="Map">
+            <Option type="QString" value="native:difference_5" name="child_id"/>
+            <Option type="QString" value="OUTPUT" name="output_name"/>
+            <Option type="int" value="1" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="SPLIT">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="bool" value="false" name="static_value"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="saga:polygonunion_5">
+      <Option type="bool" value="false" name="active"/>
+      <Option name="alg_config"/>
+      <Option type="QString" value="saga:polygonunion" name="alg_id"/>
+      <Option type="QString" value="14_Polygon union_JalurKA_Jalan_Perairan_Kampung_Sawah_AreaTerbangun_AreaTdkTerbangun_Bersih_pl" name="component_description"/>
+      <Option type="double" value="2885" name="component_pos_x"/>
+      <Option type="double" value="1556" name="component_pos_y"/>
+      <Option name="dependencies"/>
+      <Option type="QString" value="saga:polygonunion_5" name="id"/>
+      <Option type="Map" name="outputs">
+        <Option type="Map" name="Bersih">
+          <Option type="QString" value="saga:polygonunion_5" name="child_id"/>
+          <Option type="QString" value="Bersih" name="component_description"/>
+          <Option type="double" value="3085" name="component_pos_x"/>
+          <Option type="double" value="1601" name="component_pos_y"/>
+          <Option type="invalid" name="default_value"/>
+          <Option type="bool" value="false" name="mandatory"/>
+          <Option type="QString" value="Bersih" name="name"/>
+          <Option type="QString" value="RESULT" name="output_name"/>
+        </Option>
+      </Option>
+      <Option type="bool" value="true" name="outputs_collapsed"/>
+      <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="A">
+          <Option type="Map">
+            <Option type="QString" value="native:difference_6" name="child_id"/>
+            <Option type="QString" value="OUTPUT" name="output_name"/>
+            <Option type="int" value="1" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="B">
+          <Option type="Map">
+            <Option type="QString" value="saga:polygonunion_4" name="child_id"/>
+            <Option type="QString" value="RESULT" name="output_name"/>
+            <Option type="int" value="1" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="SPLIT">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="bool" value="false" name="static_value"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+  </Option>
+  <Option name="help"/>
+  <Option type="Map" name="modelVariables">
+    <Option type="QString" value="" name=""/>
+  </Option>
+  <Option type="QString" value="" name="model_group"/>
+  <Option type="QString" value="CleanData" name="model_name"/>
+  <Option type="Map" name="parameterDefinitions">
+    <Option type="Map" name="areatdkpadatpenduduk">
+      <Option type="List" name="data_types">
+        <Option type="int" value="2"/>
+      </Option>
+      <Option type="invalid" name="default"/>
+      <Option type="QString" value="Area tdk padat penduduk_pl" name="description"/>
+      <Option type="int" value="0" name="flags"/>
+      <Option name="metadata"/>
+      <Option type="QString" value="areatdkpadatpenduduk" name="name"/>
+      <Option type="QString" value="source" name="parameter_type"/>
+    </Option>
+    <Option type="Map" name="areaterbangunpl">
+      <Option type="List" name="data_types">
+        <Option type="int" value="2"/>
+      </Option>
+      <Option type="invalid" name="default"/>
+      <Option type="QString" value="Area Terbangun_pl" name="description"/>
+      <Option type="int" value="0" name="flags"/>
+      <Option name="metadata"/>
+      <Option type="QString" value="areaterbangunpl" name="name"/>
+      <Option type="QString" value="source" name="parameter_type"/>
+    </Option>
+    <Option type="Map" name="jalanln">
+      <Option type="List" name="data_types">
+        <Option type="int" value="1"/>
+      </Option>
+      <Option type="invalid" name="default"/>
+      <Option type="QString" value="Jalan_ln" name="description"/>
+      <Option type="int" value="0" name="flags"/>
+      <Option name="metadata"/>
+      <Option type="QString" value="jalanln" name="name"/>
+      <Option type="QString" value="source" name="parameter_type"/>
+    </Option>
+    <Option type="Map" name="jalurkaln">
+      <Option type="List" name="data_types">
+        <Option type="int" value="1"/>
+      </Option>
+      <Option type="invalid" name="default"/>
+      <Option type="QString" value="JalurKA_ln" name="description"/>
+      <Option type="int" value="0" name="flags"/>
+      <Option name="metadata"/>
+      <Option type="QString" value="jalurkaln" name="name"/>
+      <Option type="QString" value="source" name="parameter_type"/>
+    </Option>
+    <Option type="Map" name="kampungpl">
+      <Option type="List" name="data_types">
+        <Option type="int" value="2"/>
+      </Option>
+      <Option type="invalid" name="default"/>
+      <Option type="QString" value="Kampung_pl" name="description"/>
+      <Option type="int" value="0" name="flags"/>
+      <Option name="metadata"/>
+      <Option type="QString" value="kampungpl" name="name"/>
+      <Option type="QString" value="source" name="parameter_type"/>
+    </Option>
+    <Option type="Map" name="perairanpl">
+      <Option type="List" name="data_types">
+        <Option type="int" value="2"/>
+      </Option>
+      <Option type="invalid" name="default"/>
+      <Option type="QString" value="Perairan_pl" name="description"/>
+      <Option type="int" value="0" name="flags"/>
+      <Option name="metadata"/>
+      <Option type="QString" value="perairanpl" name="name"/>
+      <Option type="QString" value="source" name="parameter_type"/>
+    </Option>
+    <Option type="Map" name="saga:polygonunion_1:JalurKA_Jalan_Perairan_Bersih_pl">
+      <Option type="bool" value="true" name="create_by_default"/>
+      <Option type="int" value="-1" name="data_type"/>
+      <Option type="invalid" name="default"/>
+      <Option type="QString" value="JalurKA_Jalan_Perairan_Bersih_pl" name="description"/>
+      <Option type="int" value="0" name="flags"/>
+      <Option name="metadata"/>
+      <Option type="QString" value="saga:polygonunion_1:JalurKA_Jalan_Perairan_Bersih_pl" name="name"/>
+      <Option type="QString" value="vectorDestination" name="parameter_type"/>
+      <Option type="bool" value="false" name="supports_non_file_outputs"/>
+    </Option>
+    <Option type="Map" name="sawahpl">
+      <Option type="List" name="data_types">
+        <Option type="int" value="2"/>
+      </Option>
+      <Option type="invalid" name="default"/>
+      <Option type="QString" value="Sawah_pl" name="description"/>
+      <Option type="int" value="0" name="flags"/>
+      <Option name="metadata"/>
+      <Option type="QString" value="sawahpl" name="name"/>
+      <Option type="QString" value="source" name="parameter_type"/>
+    </Option>
+  </Option>
+  <Option type="Map" name="parameters">
+    <Option type="Map" name="areatdkpadatpenduduk">
+      <Option type="QString" value="areatdkpadatpenduduk" name="component_description"/>
+      <Option type="double" value="2663" name="component_pos_x"/>
+      <Option type="double" value="1409" name="component_pos_y"/>
+      <Option type="QString" value="areatdkpadatpenduduk" name="name"/>
+    </Option>
+    <Option type="Map" name="areaterbangunpl">
+      <Option type="QString" value="areaterbangunpl" name="component_description"/>
+      <Option type="double" value="2240" name="component_pos_x"/>
+      <Option type="double" value="1144" name="component_pos_y"/>
+      <Option type="QString" value="areaterbangunpl" name="name"/>
+    </Option>
+    <Option type="Map" name="jalanln">
+      <Option type="QString" value="jalanln" name="component_description"/>
+      <Option type="double" value="233" name="component_pos_x"/>
+      <Option type="double" value="93" name="component_pos_y"/>
+      <Option type="QString" value="jalanln" name="name"/>
+    </Option>
+    <Option type="Map" name="jalurkaln">
+      <Option type="QString" value="jalurkaln" name="component_description"/>
+      <Option type="double" value="668" name="component_pos_x"/>
+      <Option type="double" value="113" name="component_pos_y"/>
+      <Option type="QString" value="jalurkaln" name="name"/>
+    </Option>
+    <Option type="Map" name="kampungpl">
+      <Option type="QString" value="kampungpl" name="component_description"/>
+      <Option type="double" value="1492" name="component_pos_x"/>
+      <Option type="double" value="697" name="component_pos_y"/>
+      <Option type="QString" value="kampungpl" name="name"/>
+    </Option>
+    <Option type="Map" name="perairanpl">
+      <Option type="QString" value="perairanpl" name="component_description"/>
+      <Option type="double" value="1008" name="component_pos_x"/>
+      <Option type="double" value="429" name="component_pos_y"/>
+      <Option type="QString" value="perairanpl" name="name"/>
+    </Option>
+    <Option type="Map" name="sawahpl">
+      <Option type="QString" value="sawahpl" name="component_description"/>
+      <Option type="double" value="1833" name="component_pos_x"/>
+      <Option type="double" value="926" name="component_pos_y"/>
+      <Option type="QString" value="sawahpl" name="name"/>
+    </Option>
+  </Option>
+</Option>

@@ -20,4 +20,6 @@
 **/public-transportation/jakarta-train/data/raw/
 **/public-transportation/jakarta-train/output/pdf/
 **/public-transportation/jakarta-train/output/png/
-**/jkt-then-now
+**/jkt-then-now/data/vector/source_old/
+**/jkt-then-now/data/vector/source_new/
+**/jkt-then-now/data/raster/
