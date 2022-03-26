@@ -1,0 +1,421 @@
+<!DOCTYPE qgis_style>
+<qgis_style version="2">
+  <symbols>
+    <symbol name="Overcast Bangunan" type="fill" clip_to_extent="1" alpha="1" tags="Tom's Styles" force_rhr="0">
+      <data_defined_properties>
+        <Option type="Map">
+          <Option name="name" type="QString" value=""/>
+          <Option name="properties"/>
+          <Option name="type" type="QString" value="collection"/>
+        </Option>
+      </data_defined_properties>
+      <layer class="SimpleFill" enabled="1" locked="0" pass="0">
+        <Option type="Map">
+          <Option name="border_width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+          <Option name="color" type="QString" value="223,235,236,255"/>
+          <Option name="joinstyle" type="QString" value="bevel"/>
+          <Option name="offset" type="QString" value="0,0"/>
+          <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+          <Option name="offset_unit" type="QString" value="MM"/>
+          <Option name="outline_color" type="QString" value="205,221,224,255"/>
+          <Option name="outline_style" type="QString" value="solid"/>
+          <Option name="outline_width" type="QString" value="0.26"/>
+          <Option name="outline_width_unit" type="QString" value="MM"/>
+          <Option name="style" type="QString" value="solid"/>
+        </Option>
+        <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+        <prop k="color" v="223,235,236,255"/>
+        <prop k="joinstyle" v="bevel"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+        <prop k="offset_unit" v="MM"/>
+        <prop k="outline_color" v="205,221,224,255"/>
+        <prop k="outline_style" v="solid"/>
+        <prop k="outline_width" v="0.26"/>
+        <prop k="outline_width_unit" v="MM"/>
+        <prop k="style" v="solid"/>
+        <data_defined_properties>
+          <Option type="Map">
+            <Option name="name" type="QString" value=""/>
+            <Option name="properties"/>
+            <Option name="type" type="QString" value="collection"/>
+          </Option>
+        </data_defined_properties>
+      </layer>
+    </symbol>
+    <symbol name="Overcast Green" type="fill" clip_to_extent="1" alpha="1" force_rhr="0">
+      <data_defined_properties>
+        <Option type="Map">
+          <Option name="name" type="QString" value=""/>
+          <Option name="properties"/>
+          <Option name="type" type="QString" value="collection"/>
+        </Option>
+      </data_defined_properties>
+      <layer class="SimpleFill" enabled="1" locked="0" pass="0">
+        <Option type="Map">
+          <Option name="border_width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+          <Option name="color" type="QString" value="177,205,183,255"/>
+          <Option name="joinstyle" type="QString" value="bevel"/>
+          <Option name="offset" type="QString" value="0,0"/>
+          <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+          <Option name="offset_unit" type="QString" value="MM"/>
+          <Option name="outline_color" type="QString" value="35,35,35,255"/>
+          <Option name="outline_style" type="QString" value="no"/>
+          <Option name="outline_width" type="QString" value="0"/>
+          <Option name="outline_width_unit" type="QString" value="MM"/>
+          <Option name="style" type="QString" value="solid"/>
+        </Option>
+        <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+        <prop k="color" v="177,205,183,255"/>
+        <prop k="joinstyle" v="bevel"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+        <prop k="offset_unit" v="MM"/>
+        <prop k="outline_color" v="35,35,35,255"/>
+        <prop k="outline_style" v="no"/>
+        <prop k="outline_width" v="0"/>
+        <prop k="outline_width_unit" v="MM"/>
+        <prop k="style" v="solid"/>
+        <data_defined_properties>
+          <Option type="Map">
+            <Option name="name" type="QString" value=""/>
+            <Option name="properties"/>
+            <Option name="type" type="QString" value="collection"/>
+          </Option>
+        </data_defined_properties>
+      </layer>
+    </symbol>
+    <symbol name="Overcast Jalan" type="fill" clip_to_extent="1" alpha="1" tags="Tom's Styles" force_rhr="0">
+      <data_defined_properties>
+        <Option type="Map">
+          <Option name="name" type="QString" value=""/>
+          <Option name="properties"/>
+          <Option name="type" type="QString" value="collection"/>
+        </Option>
+      </data_defined_properties>
+      <layer class="SimpleFill" enabled="1" locked="0" pass="0">
+        <Option type="Map">
+          <Option name="border_width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+          <Option name="color" type="QString" value="244,250,249,255"/>
+          <Option name="joinstyle" type="QString" value="bevel"/>
+          <Option name="offset" type="QString" value="0,0"/>
+          <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+          <Option name="offset_unit" type="QString" value="MM"/>
+          <Option name="outline_color" type="QString" value="35,35,35,255"/>
+          <Option name="outline_style" type="QString" value="no"/>
+          <Option name="outline_width" type="QString" value="0"/>
+          <Option name="outline_width_unit" type="QString" value="MM"/>
+          <Option name="style" type="QString" value="solid"/>
+        </Option>
+        <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+        <prop k="color" v="244,250,249,255"/>
+        <prop k="joinstyle" v="bevel"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+        <prop k="offset_unit" v="MM"/>
+        <prop k="outline_color" v="35,35,35,255"/>
+        <prop k="outline_style" v="no"/>
+        <prop k="outline_width" v="0"/>
+        <prop k="outline_width_unit" v="MM"/>
+        <prop k="style" v="solid"/>
+        <data_defined_properties>
+          <Option type="Map">
+            <Option name="name" type="QString" value=""/>
+            <Option name="properties"/>
+            <Option name="type" type="QString" value="collection"/>
+          </Option>
+        </data_defined_properties>
+      </layer>
+    </symbol>
+    <symbol name="Overcast Kampung" type="fill" clip_to_extent="1" alpha="1" tags="Tom's Styles" force_rhr="0">
+      <data_defined_properties>
+        <Option type="Map">
+          <Option name="name" type="QString" value=""/>
+          <Option name="properties"/>
+          <Option name="type" type="QString" value="collection"/>
+        </Option>
+      </data_defined_properties>
+      <layer class="SimpleFill" enabled="1" locked="0" pass="0">
+        <Option type="Map">
+          <Option name="border_width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+          <Option name="color" type="QString" value="236,243,244,255"/>
+          <Option name="joinstyle" type="QString" value="bevel"/>
+          <Option name="offset" type="QString" value="0,0"/>
+          <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+          <Option name="offset_unit" type="QString" value="MM"/>
+          <Option name="outline_color" type="QString" value="35,35,35,255"/>
+          <Option name="outline_style" type="QString" value="no"/>
+          <Option name="outline_width" type="QString" value="0"/>
+          <Option name="outline_width_unit" type="QString" value="MM"/>
+          <Option name="style" type="QString" value="solid"/>
+        </Option>
+        <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+        <prop k="color" v="236,243,244,255"/>
+        <prop k="joinstyle" v="bevel"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+        <prop k="offset_unit" v="MM"/>
+        <prop k="outline_color" v="35,35,35,255"/>
+        <prop k="outline_style" v="no"/>
+        <prop k="outline_width" v="0"/>
+        <prop k="outline_width_unit" v="MM"/>
+        <prop k="style" v="solid"/>
+        <data_defined_properties>
+          <Option type="Map">
+            <Option name="name" type="QString" value=""/>
+            <Option name="properties"/>
+            <Option name="type" type="QString" value="collection"/>
+          </Option>
+        </data_defined_properties>
+      </layer>
+      <layer class="SimpleFill" enabled="1" locked="0" pass="0">
+        <Option type="Map">
+          <Option name="border_width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+          <Option name="color" type="QString" value="193,215,198,255"/>
+          <Option name="joinstyle" type="QString" value="bevel"/>
+          <Option name="offset" type="QString" value="0,0"/>
+          <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+          <Option name="offset_unit" type="QString" value="MM"/>
+          <Option name="outline_color" type="QString" value="35,35,35,255"/>
+          <Option name="outline_style" type="QString" value="no"/>
+          <Option name="outline_width" type="QString" value="0"/>
+          <Option name="outline_width_unit" type="QString" value="MM"/>
+          <Option name="style" type="QString" value="dense5"/>
+        </Option>
+        <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+        <prop k="color" v="193,215,198,255"/>
+        <prop k="joinstyle" v="bevel"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+        <prop k="offset_unit" v="MM"/>
+        <prop k="outline_color" v="35,35,35,255"/>
+        <prop k="outline_style" v="no"/>
+        <prop k="outline_width" v="0"/>
+        <prop k="outline_width_unit" v="MM"/>
+        <prop k="style" v="dense5"/>
+        <data_defined_properties>
+          <Option type="Map">
+            <Option name="name" type="QString" value=""/>
+            <Option name="properties"/>
+            <Option name="type" type="QString" value="collection"/>
+          </Option>
+        </data_defined_properties>
+      </layer>
+    </symbol>
+    <symbol name="Overcast Kebun" type="fill" clip_to_extent="1" alpha="1" tags="Tom's Styles" force_rhr="0">
+      <data_defined_properties>
+        <Option type="Map">
+          <Option name="name" type="QString" value=""/>
+          <Option name="properties"/>
+          <Option name="type" type="QString" value="collection"/>
+        </Option>
+      </data_defined_properties>
+      <layer class="SimpleFill" enabled="1" locked="0" pass="0">
+        <Option type="Map">
+          <Option name="border_width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+          <Option name="color" type="QString" value="193,215,198,255"/>
+          <Option name="joinstyle" type="QString" value="bevel"/>
+          <Option name="offset" type="QString" value="0,0"/>
+          <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+          <Option name="offset_unit" type="QString" value="MM"/>
+          <Option name="outline_color" type="QString" value="35,35,35,255"/>
+          <Option name="outline_style" type="QString" value="no"/>
+          <Option name="outline_width" type="QString" value="0"/>
+          <Option name="outline_width_unit" type="QString" value="MM"/>
+          <Option name="style" type="QString" value="solid"/>
+        </Option>
+        <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+        <prop k="color" v="193,215,198,255"/>
+        <prop k="joinstyle" v="bevel"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+        <prop k="offset_unit" v="MM"/>
+        <prop k="outline_color" v="35,35,35,255"/>
+        <prop k="outline_style" v="no"/>
+        <prop k="outline_width" v="0"/>
+        <prop k="outline_width_unit" v="MM"/>
+        <prop k="style" v="solid"/>
+        <data_defined_properties>
+          <Option type="Map">
+            <Option name="name" type="QString" value=""/>
+            <Option name="properties"/>
+            <Option name="type" type="QString" value="collection"/>
+          </Option>
+        </data_defined_properties>
+      </layer>
+    </symbol>
+    <symbol name="Overcast Perairan" type="fill" clip_to_extent="1" alpha="1" tags="Tom's Styles" force_rhr="0">
+      <data_defined_properties>
+        <Option type="Map">
+          <Option name="name" type="QString" value=""/>
+          <Option name="properties"/>
+          <Option name="type" type="QString" value="collection"/>
+        </Option>
+      </data_defined_properties>
+      <layer class="SimpleFill" enabled="1" locked="0" pass="0">
+        <Option type="Map">
+          <Option name="border_width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+          <Option name="color" type="QString" value="191,213,223,255"/>
+          <Option name="joinstyle" type="QString" value="bevel"/>
+          <Option name="offset" type="QString" value="0,0"/>
+          <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+          <Option name="offset_unit" type="QString" value="MM"/>
+          <Option name="outline_color" type="QString" value="35,35,35,255"/>
+          <Option name="outline_style" type="QString" value="no"/>
+          <Option name="outline_width" type="QString" value="0"/>
+          <Option name="outline_width_unit" type="QString" value="MM"/>
+          <Option name="style" type="QString" value="solid"/>
+        </Option>
+        <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+        <prop k="color" v="191,213,223,255"/>
+        <prop k="joinstyle" v="bevel"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+        <prop k="offset_unit" v="MM"/>
+        <prop k="outline_color" v="35,35,35,255"/>
+        <prop k="outline_style" v="no"/>
+        <prop k="outline_width" v="0"/>
+        <prop k="outline_width_unit" v="MM"/>
+        <prop k="style" v="solid"/>
+        <data_defined_properties>
+          <Option type="Map">
+            <Option name="name" type="QString" value=""/>
+            <Option name="properties"/>
+            <Option name="type" type="QString" value="collection"/>
+          </Option>
+        </data_defined_properties>
+      </layer>
+    </symbol>
+    <symbol name="Overcast Rawa" type="fill" clip_to_extent="1" alpha="1" tags="Tom's Styles" force_rhr="0">
+      <data_defined_properties>
+        <Option type="Map">
+          <Option name="name" type="QString" value=""/>
+          <Option name="properties"/>
+          <Option name="type" type="QString" value="collection"/>
+        </Option>
+      </data_defined_properties>
+      <layer class="SimpleFill" enabled="1" locked="0" pass="0">
+        <Option type="Map">
+          <Option name="border_width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+          <Option name="color" type="QString" value="212,229,210,255"/>
+          <Option name="joinstyle" type="QString" value="bevel"/>
+          <Option name="offset" type="QString" value="0,0"/>
+          <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+          <Option name="offset_unit" type="QString" value="MM"/>
+          <Option name="outline_color" type="QString" value="35,35,35,255"/>
+          <Option name="outline_style" type="QString" value="no"/>
+          <Option name="outline_width" type="QString" value="0"/>
+          <Option name="outline_width_unit" type="QString" value="MM"/>
+          <Option name="style" type="QString" value="solid"/>
+        </Option>
+        <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+        <prop k="color" v="212,229,210,255"/>
+        <prop k="joinstyle" v="bevel"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+        <prop k="offset_unit" v="MM"/>
+        <prop k="outline_color" v="35,35,35,255"/>
+        <prop k="outline_style" v="no"/>
+        <prop k="outline_width" v="0"/>
+        <prop k="outline_width_unit" v="MM"/>
+        <prop k="style" v="solid"/>
+        <data_defined_properties>
+          <Option type="Map">
+            <Option name="name" type="QString" value=""/>
+            <Option name="properties"/>
+            <Option name="type" type="QString" value="collection"/>
+          </Option>
+        </data_defined_properties>
+      </layer>
+    </symbol>
+    <symbol name="Overcast Sawah" type="fill" clip_to_extent="1" alpha="1" tags="Tom's Styles" force_rhr="0">
+      <data_defined_properties>
+        <Option type="Map">
+          <Option name="name" type="QString" value=""/>
+          <Option name="properties"/>
+          <Option name="type" type="QString" value="collection"/>
+        </Option>
+      </data_defined_properties>
+      <layer class="SimpleFill" enabled="1" locked="0" pass="0">
+        <Option type="Map">
+          <Option name="border_width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+          <Option name="color" type="QString" value="177,205,183,255"/>
+          <Option name="joinstyle" type="QString" value="bevel"/>
+          <Option name="offset" type="QString" value="0,0"/>
+          <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+          <Option name="offset_unit" type="QString" value="MM"/>
+          <Option name="outline_color" type="QString" value="35,35,35,255"/>
+          <Option name="outline_style" type="QString" value="no"/>
+          <Option name="outline_width" type="QString" value="0"/>
+          <Option name="outline_width_unit" type="QString" value="MM"/>
+          <Option name="style" type="QString" value="solid"/>
+        </Option>
+        <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+        <prop k="color" v="177,205,183,255"/>
+        <prop k="joinstyle" v="bevel"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+        <prop k="offset_unit" v="MM"/>
+        <prop k="outline_color" v="35,35,35,255"/>
+        <prop k="outline_style" v="no"/>
+        <prop k="outline_width" v="0"/>
+        <prop k="outline_width_unit" v="MM"/>
+        <prop k="style" v="solid"/>
+        <data_defined_properties>
+          <Option type="Map">
+            <Option name="name" type="QString" value=""/>
+            <Option name="properties"/>
+            <Option name="type" type="QString" value="collection"/>
+          </Option>
+        </data_defined_properties>
+      </layer>
+    </symbol>
+    <symbol name="Overcast Terbangun" type="fill" clip_to_extent="1" alpha="1" tags="Tom's Styles" force_rhr="0">
+      <data_defined_properties>
+        <Option type="Map">
+          <Option name="name" type="QString" value=""/>
+          <Option name="properties"/>
+          <Option name="type" type="QString" value="collection"/>
+        </Option>
+      </data_defined_properties>
+      <layer class="SimpleFill" enabled="1" locked="0" pass="0">
+        <Option type="Map">
+          <Option name="border_width_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+          <Option name="color" type="QString" value="236,243,244,255"/>
+          <Option name="joinstyle" type="QString" value="bevel"/>
+          <Option name="offset" type="QString" value="0,0"/>
+          <Option name="offset_map_unit_scale" type="QString" value="3x:0,0,0,0,0,0"/>
+          <Option name="offset_unit" type="QString" value="MM"/>
+          <Option name="outline_color" type="QString" value="35,35,35,255"/>
+          <Option name="outline_style" type="QString" value="no"/>
+          <Option name="outline_width" type="QString" value="0"/>
+          <Option name="outline_width_unit" type="QString" value="MM"/>
+          <Option name="style" type="QString" value="solid"/>
+        </Option>
+        <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+        <prop k="color" v="236,243,244,255"/>
+        <prop k="joinstyle" v="bevel"/>
+        <prop k="offset" v="0,0"/>
+        <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+        <prop k="offset_unit" v="MM"/>
+        <prop k="outline_color" v="35,35,35,255"/>
+        <prop k="outline_style" v="no"/>
+        <prop k="outline_width" v="0"/>
+        <prop k="outline_width_unit" v="MM"/>
+        <prop k="style" v="solid"/>
+        <data_defined_properties>
+          <Option type="Map">
+            <Option name="name" type="QString" value=""/>
+            <Option name="properties"/>
+            <Option name="type" type="QString" value="collection"/>
+          </Option>
+        </data_defined_properties>
+      </layer>
+    </symbol>
+  </symbols>
+  <colorramps/>
+  <textformats/>
+  <labelsettings/>
+  <legendpatchshapes/>
+  <symbols3d/>
+</qgis_style>
